@@ -11,7 +11,6 @@ const Contact = () => {
       top: 0,
       left: 0,
       behavior: "smooth",
-
     });
   }, []);
 
@@ -174,7 +173,9 @@ const Contact = () => {
               <h4 className="text-[24px] leading-[24px] font-medium">
                 Mail Us
               </h4>
-              <p className="text-blue-500 leading-[16px]">info@codepad.com</p>
+              <p className="text-blue-500 leading-[16px]">
+                info@Bronzetent.com
+              </p>
             </div>
           </div>
           <div className="flex gap-5 items-start justify-center">

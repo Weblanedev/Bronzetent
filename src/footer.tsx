@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
 
       <p className="text-[12px] leading-[24px] text-center text-gray-400">
-        © 2023 Codepad Limited. All Rights Reserved Apollo
+        © 2023 Bronzetent Limited. All Rights Reserved Apollo
       </p>
     </div>
   );
