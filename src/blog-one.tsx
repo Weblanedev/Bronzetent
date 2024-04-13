@@ -2,19 +2,16 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const BlogOne = () => {
-    useEffect(() => {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      }, []);
-
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
-     
-
       <section className="relative border h-[300px] md:h-[550px]">
         <div className="absolute z-10 opacity-20 w-full h-full  bg-black"></div>
 
@@ -25,10 +22,10 @@ const BlogOne = () => {
         />
 
         <div className="absolute top-0 z-20 text-white flex flex-col gap-9 md:gap-9 items-center justify-center h-full w-full">
-          <h4 className="text-sm leading-[14px] font-medium text-white bg-blue-500 hover:bg-blue-600 cursor-pointer transition-colors rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+          <h4 className="text-sm leading-[14px] font-medium text-white bg-orange-500 hover:bg-orange-600 cursor-pointer transition-colors rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
             News
           </h4>
-          <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-full sm:w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px]">
+          <h1 className="font-medium md:font-semibold text-[40px] md:text-[44px] w-full sm:w-[550px] md:w-[1000px] text-center leading-snug md:leading-[54px] text-white">
             How organisations can champion women every day of the year
           </h1>
         </div>
@@ -37,7 +34,7 @@ const BlogOne = () => {
       <section className="relative p-10 md:px-[262px] md:py-[80px] flex flex-col gap-9 items-center w-full justify-center">
         <div className="w-full flex flex-col md:flex-row gap-[66px] justify-between">
           <div className="flex flex-col items-start gap-[10px] md:pt-[78px]">
-            <h3 className="bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-white py-[9px] px-[17px] rounded-full font-semibold text-[14px] leading-[14px]">
+            <h3 className="bg-gradient-to-r from-orange-600 via-green-500 to-indigo-400 inline-block text-white py-[9px] px-[17px] rounded-md font-semibold text-[14px] leading-[14px]">
               Marketing Tips
             </h3>
             <h2 className="font-mediium text-[30.68px] md:text-[40px] w-full sm:w-[530px] md:w-[382px] leading-[45px] text-[#010910]">
@@ -175,14 +172,12 @@ const BlogOne = () => {
               Next post
             </h4>
 
-            <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[600px] leading-snug md:leading-snug text-center">
+            <h1 className="font-medium md:font-semibold text-[30px] md:text-[40px] w-full sm:w-[550px] md:w-[600px] leading-snug md:leading-snug text-center text-white">
               Apple Vision Pro and its future in the business world
             </h1>
           </div>
         </Link>
       </section>
-
-     
     </div>
   );
 };

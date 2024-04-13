@@ -2,17 +2,15 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-blue-800 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
+    <div className="w-full border-t border-orange-900/10 bg-orange-800 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
       <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
         <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[850px]">
-          Our highly skilled development teams specialized in Java, PHP, React,
-          Angular and AWS help you accelarate your business via modern custom
-          software solutions.
+        Experience the transformative power of innovation and seamless solutions with dynamics. Our journey doesn't end with the delivery of a solution.
         </h3>
 
         <Link
           to="/products"
-          className="text-base font-medium text-[#333] bg-white rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-gray-200 flex items-center justify-center gap-3 max-w-max"
+          className="text-base font-medium text-orange-950 bg-white rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-gray-200 flex items-center justify-center gap-3 max-w-max"
         >
           Explore Products
         </Link>
@@ -51,7 +49,7 @@ const Footer = () => {
         </Link>
       </div>
 
-      <p className="text-[12px] leading-[24px] text-center text-gray-400">
+      <p className="text-[12px] leading-[24px] text-center text-orange-100/50">
         © 2023 Bronzetent Limited. All Rights Reserved Apollo
       </p>
     </div>

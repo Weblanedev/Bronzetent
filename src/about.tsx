@@ -11,33 +11,38 @@ const About = () => {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px]">
-      <section className="flex flex-col-reverse md:flex-row h-[90vh] md:h-[55vh] mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-white">
+    <div className="w-full h-full flex flex-col pt-[66px] md:pt-[80px] bg-white">
+      <section className="flex relative overflow-hidden flex-col-reverse md:flex-row h-[90vh] md:h-[55vh] w-full px-10 md:px-[130px] items-center justify-center md:justify-between gap-5 bg-orange-50/20">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
-          <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
+          <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] text-orange-950 md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
             About Bronzetent
           </h1>
 
-          <p className="text-center md:text-left mt-[-30px] w-[450px] md:w-[330px]">
+          <p className="text-center md:text-left mt-[-30px] w-[450px] md:w-[330px] text-orange-950">
             Our story, our values and how our customers drive everything we do.
           </p>
 
           <Link
             to="/products"
-            className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-blue-600 flex items-center justify-center gap-3"
+            className="text-base font-medium text-white bg-orange-500 rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-orange-600 flex items-center justify-center gap-3"
           >
             Explore Products
           </Link>
         </div>
 
         <img
-          src="https://tis-tis-io-asset-prd.s3.eu-central-1.amazonaws.com/Meet_the_Team_0cce546d6a.png"
+          src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/about-service-3.png"
           alt=""
-          className="w-full h-[300px] md:h-[300px] md:w-[500px] object-cover rounded-xl shadow-lg"
+          className="w-full opacity-0 h-[300px] md:h-[300px] md:w-[500px] object-cover rounded-full shadow-lg"
+        />
+        <img
+          src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/about-service-3.png"
+          alt=""
+          className="w-full h-[750px] -top-96 md:top-auto absolute md:-right-20 md:h-[700px] md:w-[700px] object-cover rounded-full shadow-lg"
         />
       </section>
 
-      <section className="flex flex-col-reverse md:flex-row-reverse mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-white py-14 md:py-20">
+      <section className="flex w-full flex-col-reverse md:flex-row-reverse px-10 md:px-[130px] items-center justify-center md:justify-between gap-5 bg-white py-14 md:py-20 border-t border-orange-900/10">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
           <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
             Who We Are
@@ -57,14 +62,14 @@ const About = () => {
         </div>
 
         <img
-          src="https://tis-tis-io-asset-prd.s3.eu-central-1.amazonaws.com/team_339c3ad3fa.jfif"
+          src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/hero-company-about.jpg"
           alt=""
-          className="w-full h-[300px] md:h-[500px] md:w-[600px] object-cover rounded-xl shadow-lg"
+          className="w-full h-[300px] md:h-[500px] md:w-[500px] object-cover rounded-full shadow-lg"
         />
       </section>
 
-      <section className="flex w-full flex-col items-center justify-center md:justify-between gap-16 bg-blue-500/30 py-14 md:py-20">
-        <h2 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left leading-snug md:leading-[62px] text-center text-blue-950">
+      <section className="flex w-full flex-col items-center justify-center md:justify-between gap-16 bg-orange-950  py-14 md:py-20">
+        <h2 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left leading-snug md:leading-[62px] text-center text-white">
           What we value
         </h2>
         <div className="px-10 md:px-[130px] flex flex-col md:flex-row justify-center items-center w-full gap-5">
@@ -115,7 +120,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="flex flex-col-reverse md:flex-row mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-white py-14 md:py-20">
+      <section className="flex flex-col-reverse md:flex-row mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-orange-50/20 py-14 md:py-20">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
           <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
             Why Bronzetent
@@ -138,16 +143,16 @@ const About = () => {
           </p>
           <Link
             to="/contact-us"
-            className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-blue-600 flex items-center justify-center gap-3"
+            className="text-base font-medium text-white bg-orange-500 rounded-md px-7 md:px-12 py-4 md:py-5 hover:bg-orange-600 flex items-center justify-center gap-3"
           >
             Contact Us
           </Link>
         </div>
 
         <img
-          src="https://tis-tis-io-asset-prd.s3.eu-central-1.amazonaws.com/Meet_the_Team_0cce546d6a.png"
+          src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/partner-trusted.jpg"
           alt=""
-          className="w-full h-[300px] md:h-[500px] md:w-[600px] object-cover rounded-xl shadow-lg"
+          className="w-full h-[300px] md:h-[500px] md:w-[500px] object-cover rounded-full shadow-lg"
         />
       </section>
     </div>
