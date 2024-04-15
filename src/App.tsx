@@ -10,19 +10,31 @@ import ProductsPage from "./products-page";
 import BlogOne from "./blog-one";
 import BlogTwo from "./blog-two";
 import BlogThree from "./blog-three";
+import { useState } from "react";
+import { Book, books } from "./utils";
 
 function App() {
+  const [selectedBook, setSelectedBook] = useState<Book>(books[1]);
 
   return (
     <>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
+        <Route
+          path="/"
+          element={<Homepage setSelectedBook={setSelectedBook} />}
+        />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="/billing" element={<Billing />} />
+        <Route
+          path="/billing"
+          element={<Billing selectedBook={selectedBook} />}
+        />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        <Route path="/products" element={<ProductsPage />} />
+        <Route
+          path="/products"
+          element={<ProductsPage setSelectedBook={setSelectedBook} />}
+        />
         <Route path="/blog/one" element={<BlogOne />} />
         <Route path="/blog/two" element={<BlogTwo />} />
         <Route path="/blog/three" element={<BlogThree />} />

@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
-import { books } from "./utils";
+import { Book, books } from "./utils";
 import { useEffect } from "react";
 
-const Homepage = () => {
+const Homepage = ({
+  setSelectedBook,
+}: {
+  setSelectedBook: (selectedBook: Book) => void;
+}) => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -16,11 +20,12 @@ const Homepage = () => {
       <section className="flex overflow-hidden relative flex-col-reverse md:flex-row h-[90vh] md:h-[85vh] px-10 md:px-[130px] items-center justify-center md:justify-between gap-5 ">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
           <h1 className="font-medium md:font-semibold text-[30px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
-          Seamless IT for your business, boosting your growth.
+            Seamless IT for your business, boosting your growth.
           </h1>
 
           <p className="text-center md:text-left mt-[-30px] w-[450px] md:w-[600px]">
-          We provide the expertise and support to propel your business forward in the digital landscape.
+            We provide the expertise and support to propel your business forward
+            in the digital landscape.
           </p>
 
           <Link
@@ -55,11 +60,16 @@ const Homepage = () => {
               <h4 className="font-medium text-[18px] md:text-[20px] md:w-[240px] leading-tight text-center w-[200px] line-clamp-2">
                 {book.title}
               </h4>
-              <p className="mt-[-15px] text-[12px] md:text-[14px] text-center w-[200px] line-clamp-3 md:w-[240px]">
+
+              <p className="text-[12px] md:text-[14px] text-center w-[200px] line-clamp-3 md:w-[240px]">
                 {book.summary}
               </p>
+              <h4 className="font-bold text-[18px] leading-tight text-center w-[200px] line-clamp-2">
+                {book.price}
+              </h4>
               <Link
                 to="/billing"
+                onClick={() => setSelectedBook(book)}
                 className="text-base font-medium text-white bg-orange-500 rounded-md px-7 md:px-8 py-2 md:py-3 hover:bg-orange-600 flex items-center justify-center gap-3"
               >
                 Purchase
@@ -89,7 +99,8 @@ const Homepage = () => {
               </h4>
 
               <h1 className="font-medium md:font-semibold text-[30px] md:text-[32px] w-full sm:w-[550px] md:w-[400px] leading-tight !text-white">
-              OpenAI launches new alignment division to tackle risks of superintelligent AI
+                OpenAI launches new alignment division to tackle risks of
+                superintelligent AI
               </h1>
             </div>
           </Link>
@@ -112,15 +123,39 @@ const Homepage = () => {
               </h4>
 
               <h1 className="font-medium md:font-semibold text-[30px] md:text-[32px] w-full sm:w-[550px] md:w-[400px] leading-tight !text-white">
-              Bluebase launches Tap to Pay on smartphone for international and domestic business
+                Bluebase launches Tap to Pay on smartphone for international and
+                domestic business
               </h1>
             </div>
           </Link>
         </div>
         <div className="flex flex-col md:flex-row-reverse gap-[30px] w-full items-center justify-center">
           <Link
-            to="/blog/three"
+            to="/blog/one"
             className="w-full sm:w-[660px] h-[334px] md:w-[760px] md:h-[396px] relative rounded-2xl cursor-pointer group"
+          >
+            <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
+
+            <img
+              src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-1.png"
+              alt=""
+              className="w-full h-full object-cover rounded-2xl"
+            />
+
+            <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
+              <h4 className="text-sm leading-[14px] font-medium text-white bg-orange-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+                News
+              </h4>
+
+              <h1 className="font-medium md:font-semibold text-[30px] md:text-[32px] w-full sm:w-[550px] md:w-[400px] leading-tight !text-white">
+                OpenAI launches new alignment division to tackle risks of
+                superintelligent AI
+              </h1>
+            </div>
+          </Link>
+          <Link
+            to="/blog/three"
+            className="w-full sm:w-[660px] h-[334px] md:w-[470px] md:h-[396px] relative rounded-2xl cursor-pointer group"
           >
             <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
 
@@ -136,30 +171,8 @@ const Homepage = () => {
               </h4>
 
               <h1 className="font-medium md:font-semibold text-[30px] md:text-[32px] w-full sm:w-[550px] md:w-[400px] leading-tight !text-white">
-              Google Bard launches in EU, overcoming data privacy concerns in the region
-              </h1>
-            </div>
-          </Link>
-
-          <Link
-            to="/blog/one"
-            className="w-full sm:w-[660px] h-[334px] md:w-[470px] md:h-[396px] relative rounded-2xl cursor-pointer group"
-          >
-            <div className="absolute z-10 opacity-50 w-full h-full  bg-black rounded-2xl group-hover:opacity-60 transition-all"></div>
-
-            <img
-              src="https://wpriverthemes.com/synck/wp-content/uploads/2024/01/news-4.jpg"
-              alt=""
-              className="w-full h-full object-cover rounded-2xl"
-            />
-
-            <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
-              <h4 className="text-sm leading-[14px] font-medium text-white bg-orange-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
-                News
-              </h4>
-
-              <h1 className="font-medium md:font-semibold text-[30px] md:text-[32px] w-full sm:w-[550px] md:w-[400px] leading-tight !text-white">
-              Regulatory tech companies fear 25% knock-on hit from gaming GST
+                Google Bard launches in EU, overcoming data privacy concerns in
+                the region
               </h1>
             </div>
           </Link>

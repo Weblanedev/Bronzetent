@@ -2,8 +2,9 @@ import { MouseEventHandler, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useModals } from "./useModal";
 import ShowOrderModal from "./show-order";
+import { Book } from "./utils";
 
-const Billing = () => {
+const Billing = ({ selectedBook }: { selectedBook: Book }) => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -11,6 +12,20 @@ const Billing = () => {
       behavior: "smooth",
     });
   }, []);
+
+  function add100Dollars(input: string): string {
+    // Extracting the numerical part of the input string
+    const numericalPart = parseFloat(input.replace(/[^\d.]/g, ""));
+
+    // Adding 100 to the numerical part
+    const result = numericalPart + 105;
+
+    // Formatting the result back to the original format
+    const formattedResult = result.toFixed(2);
+    const output = `$${formattedResult}`;
+
+    return output;
+  }
 
   // State to manage the disabled state of the button
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
@@ -119,7 +134,7 @@ const Billing = () => {
               <textarea
                 id="message"
                 rows={7}
-                className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300 rounded-[28px]"
+                className="block p-[15px] w-full text-sm text-gray-900 border border-gray-300 rounded-md"
                 placeholder="Your Message"
               ></textarea>
             </div>
@@ -141,25 +156,33 @@ const Billing = () => {
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#161616] font-medium text-[16px]">
-                Cabinet Wall Mounted × 1
+              <h4 className="text-[#161616] font-medium text-[16px] leading-5 upperc ase w-[350px]">
+                {selectedBook?.title}
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                $199.00
+                {selectedBook?.price}
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#707070] font-medium text-[13px]">
-                SUBTOTAL
+              <h4 className="text-[#707070] uppercase font-medium text-[13px]">
+                Professional consultation service charge
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                $199.00
+                $100.00
+              </h4>
+            </div>
+            <div className="flex items-center justify-between py-[15px] w-full border-b">
+              <h4 className="text-[#707070] uppercase font-medium text-[13px]">
+                Processing Fee
+              </h4>
+              <h4 className="text-[#161616] font-medium text-[16px]">
+                $5.00
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
               <h4 className="text-[#a20401] font-medium text-[16px]">
-                $199.00
+                {add100Dollars(selectedBook.price)}
               </h4>
             </div>
           </div>

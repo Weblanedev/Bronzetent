@@ -1,3 +1,9 @@
+import lean from "./assets/the lean stup.webp";
+import influence from "./assets/influence.png";
+import hooked from "./assets/Hooked-updated-cover-US.webp";
+import phoenix from "./assets/the phoenix project.jpeg";
+import digital from "./assets/Digital-Marketing-for-Dummies-book-cover.jpg";
+
 export const genres = [
   {
     id: 1,
@@ -21,6 +27,16 @@ export const genres = [
   },
 ];
 
+export interface Book {
+  id: number;
+  title: string;
+  author: string;
+  genre: string;
+  img: string;
+  price: string;
+  summary: string;
+}
+
 export const books = [
   {
     id: 1,
@@ -28,7 +44,7 @@ export const books = [
       "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
     author: "Eric Ries",
     genre: "Business/Entrepreneurship",
-    img: "https://github.com/Weblanedev/surfnet/assets/84178696/3b6a1c18-4b7c-4440-a5d0-024915576528",
+    img: lean,
     price: "$65.99",
     summary:
       "This book presents a methodology for developing businesses and products based on the concept of validated learning, experimentation, and iterative product releases.",
@@ -38,7 +54,7 @@ export const books = [
     title: "Influence: The Psychology of Persuasion",
     author: "Robert B. Cialdini",
     genre: "Psychology/Sales",
-    img: "https://github.com/Weblanedev/surfnet/assets/84178696/cfdc3a06-33ec-4efe-bfe2-47c2e9bdd8b7",
+    img: influence,
 
     price: "$72.50",
     summary:
@@ -49,7 +65,7 @@ export const books = [
     title: "Hooked: How to Build Habit-Forming Products",
     author: "Nir Eyal",
     genre: "Business/Marketing",
-    img: "https://github.com/Weblanedev/surfnet/assets/84178696/b9dd5344-4a09-48eb-9606-5ba058d79ffd",
+    img: hooked,
 
     price: "$80.99",
     summary:
@@ -61,7 +77,7 @@ export const books = [
       "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win",
     author: "Gene Kim, Kevin Behr, George Spafford",
     genre: "Business/Technology",
-    img: "https://github.com/Weblanedev/surfnet/assets/84178696/e721126f-3603-4238-aeb4-e003f72dcb07",
+    img: phoenix,
 
     price: "$97.25",
     summary:
@@ -72,7 +88,7 @@ export const books = [
     title: "Digital Marketing for Dummies",
     author: "Ryan Deiss, Russ Henneberry",
     genre: "Marketing/Technology",
-    img: "https://github.com/Weblanedev/surfnet/assets/84178696/fd347a76-560d-49fe-9f15-1d8190ecabb4",
+    img: digital,
 
     price: "$84.99",
     summary:

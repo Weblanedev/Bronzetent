@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       <p className="text-[12px] leading-[24px] text-center text-orange-100/50">
-        © 2023 Bronzetent Limited. All Rights Reserved Apollo
+        © 2023 Bronzetent Network Technologies Limited. All Rights Reserved Apollo
       </p>
     </div>
   );
