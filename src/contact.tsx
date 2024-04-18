@@ -180,17 +180,6 @@ const Contact = () => {
               </p>
             </div>
           </div>
-          <div className="flex gap-5 items-start justify-center">
-            <img src={locationIcon} alt="" className="w-6 pt-1" />
-            <div className="flex flex-col items-start justify-center gap-3">
-              <h4 className="text-[24px] leading-[24px] font-medium">
-                Address
-              </h4>
-              <p className="text-orange-500 leading-normal">
-                6, Samuel Manuwa Stree, Victoria Island, Lagos, Nigeira
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
