@@ -3,8 +3,6 @@ import { useModals } from "./useModal";
 import ShowContactModal from "./show-contact";
 import phoneIcon from "./assets/phone.png";
 import mailIcon from "./assets/mail.png";
-import locationIcon from "./assets/location.png";
-
 const Contact = () => {
   useEffect(() => {
     window.scrollTo({
