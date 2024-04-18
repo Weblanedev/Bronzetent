@@ -42,7 +42,7 @@ const Footer = () => {
           Contact
         </Link>
         <Link
-          to="/privacy-policy"
+          to="/"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
         >
           Terms & Privacy
@@ -50,7 +50,7 @@ const Footer = () => {
       </div>
 
       <p className="text-[12px] leading-[24px] text-center text-orange-100/50">
-        © 2023 Bronzetent Network Technologies Limited. All Rights Reserved Apollo
+        © 2023 Bronzetent Network Technologies Limited.
       </p>
     </div>
   );
