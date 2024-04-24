@@ -187,7 +187,7 @@ const Contact = () => {
                 Address
               </h4>
               <p className="text-orange-500 leading-normal">
-                Lagos, Nigeira
+                3 Arubiewe Yusuf Abogun Str, Atalantic View Estate, Alpha Beach Road, Lekki
               </p>
             </div>
           </div>
